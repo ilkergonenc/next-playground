@@ -1,6 +1,18 @@
 import '../styles/globals.css'
 
+import React from 'react'
+import { Inter } from 'next/font/google'
 import type { Preview } from '@storybook/react'
+
+const inter = Inter({ subsets: ['latin'] })
+
+const decorators = [
+	(Story: any) => (
+		<main className={inter.className}>
+			<Story />
+		</main>
+	),
+]
 
 const BREAKPOINTS_INT = {
 	xs: 375,
@@ -36,6 +48,15 @@ const preview: Preview = {
 			},
 		},
 		viewport: { viewports: customViewports },
+	},
+	decorators,
+	globalTypes: {
+		darkMode: {
+			defaultValue: true,
+		},
+		className: {
+			defaultValue: 'dark',
+		},
 	},
 }
 

@@ -3,7 +3,7 @@ import type { StorybookConfig } from '@storybook/nextjs'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 
 const config: StorybookConfig = {
-	stories: ['../stories/**/*.mdx', '../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+	stories: ['../**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)'],
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
@@ -18,6 +18,7 @@ const config: StorybookConfig = {
 			},
 		},
 		'@storybook/addon-a11y',
+		'storybook-tailwind-dark-mode',
 	],
 	framework: {
 		name: '@storybook/nextjs',
