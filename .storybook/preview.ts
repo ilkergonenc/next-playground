@@ -1,4 +1,30 @@
+import '../styles/globals.css'
+
 import type { Preview } from '@storybook/react'
+
+const BREAKPOINTS_INT = {
+	xs: 375,
+	sm: 600,
+	md: 900,
+	lg: 1200,
+	xl: 1400,
+}
+
+const customViewports = Object.fromEntries(
+	Object.entries(BREAKPOINTS_INT).map(([key, val], idx) => {
+		console.log(val)
+		return [
+			key,
+			{
+				name: key,
+				styles: {
+					width: `${val}px`,
+					height: `${(idx + 5) * 10}vh`,
+				},
+			},
+		]
+	})
+)
 
 const preview: Preview = {
 	parameters: {
@@ -9,6 +35,7 @@ const preview: Preview = {
 				date: /Date$/,
 			},
 		},
+		viewport: { viewports: customViewports },
 	},
 }
 
