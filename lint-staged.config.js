@@ -10,7 +10,7 @@ const buildEslintCommand = (filenames) =>
 		.join(' --file ')}`
 
 module.exports = {
-	'*.{ts,tsx}': [prettierCommand, buildEslintCommand, typeCheckCommand],
+	'*.{ts,tsx}': [prettierCommand, buildEslintCommand, () => typeCheckCommand],
 	'*.{js,jsx}': [prettierCommand, buildEslintCommand],
 	'*.json': [prettierCommand],
 }
