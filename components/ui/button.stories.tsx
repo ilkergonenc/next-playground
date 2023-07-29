@@ -4,19 +4,9 @@ import { Button } from './button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof Button> = {
-	title: 'Components/Button',
+	title: 'Components/UI/Button',
 	component: Button,
 	tags: ['autodocs'],
-	decorators: [
-		(Story) => (
-			<div className="h-full w-full bg-background p-4">
-				<Story />
-			</div>
-		),
-	],
-	parameters: {
-		layout: 'fullscreen',
-	},
 }
 
 export default meta

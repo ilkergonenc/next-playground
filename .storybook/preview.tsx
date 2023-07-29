@@ -4,22 +4,34 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import type { Preview } from '@storybook/react'
 
+import ThemeProvider from '../components/theme/theme-provider'
+import { cn as classNames } from '../lib/utils'
+
 const inter = Inter({ subsets: ['latin'] })
 
 const decorators = [
 	(Story: any) => (
-		<main className={inter.className}>
-			<Story />
+		<main
+			suppressHydrationWarning
+			className={classNames(
+				'bg-background text-foreground p-4',
+				inter.className
+			)}
+		>
+			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<Story />
+			</ThemeProvider>
 		</main>
 	),
 ]
 
 const BREAKPOINTS_INT = {
 	xs: 375,
-	sm: 600,
-	md: 900,
-	lg: 1200,
-	xl: 1400,
+	sm: 640,
+	md: 768,
+	lg: 1024,
+	xl: 1280,
+	'2xl': 1400,
 }
 
 const customViewports = Object.fromEntries(
@@ -48,6 +60,7 @@ const preview: Preview = {
 			},
 		},
 		viewport: { viewports: customViewports },
+		layout: 'fullscreen',
 	},
 	decorators,
 	globalTypes: {
@@ -61,3 +74,6 @@ const preview: Preview = {
 }
 
 export default preview
+function cn(arg0: string, className: string): string | undefined {
+	throw new Error('Function not implemented.')
+}
