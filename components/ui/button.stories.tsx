@@ -7,8 +7,14 @@ const meta: Meta<typeof Button> = {
 	title: 'Components/UI/Button',
 	component: Button,
 	tags: ['autodocs'],
+	decorators: [
+		(Story) => (
+			<div className="p-4">
+				<Story />
+			</div>
+		),
+	],
 }
-
 export default meta
 type Story = StoryObj<typeof Button>
 

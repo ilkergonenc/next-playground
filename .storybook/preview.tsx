@@ -4,23 +4,16 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import type { Preview } from '@storybook/react'
 
-import ThemeProvider from '../components/theme/theme-provider'
-import { cn as classNames } from '../lib/utils'
+import { cn as classNames } from '../components/@/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const decorators = [
 	(Story: any) => (
 		<main
-			suppressHydrationWarning
-			className={classNames(
-				'bg-background text-foreground p-4',
-				inter.className
-			)}
+			className={classNames('bg-background text-foreground', inter.className)}
 		>
-			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-				<Story />
-			</ThemeProvider>
+			<Story />
 		</main>
 	),
 ]
