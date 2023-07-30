@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes'
 
-import { Icons } from '@/components/@/icons'
+import { Icons } from '@/components/ds/icons'
 import { Button } from '@/components/ui/button'
 
 export default function ThemeToggle({ className }: { className?: string }) {

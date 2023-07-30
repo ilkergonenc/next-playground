@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { cva, type VariantProps } from 'class-variance-authority'
 
-import { cn } from '@/components/@/utils'
+import { cn } from '@/components/utils'
 
 const navigationVariants = cva('flex gap-4', {
 	variants: {

@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 import appConfig from '@/config'
-import { Icons } from '@/components/@/icons'
-import { cn } from '@/components/@/utils'
+import { cn } from '@/components/utils'
+import { Icons } from '@/components/ds/icons'
 
 // import { buttonVariants } from '@/components/ui/button'
 
