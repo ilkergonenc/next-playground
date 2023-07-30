@@ -3,8 +3,8 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 
 import { appMeta } from '@/config'
-import { fontSans } from '@/components/@/fonts'
-import { cn } from '@/components/@/utils'
+import { cn } from '@/components/utils'
+import { fontSans } from '@/components/ds/fonts'
 import LayoutRoot from '@/components/root/layout'
 import { RootProviders } from '@/components/root/providers'
 
