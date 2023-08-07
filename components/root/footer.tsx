@@ -1,8 +1,9 @@
 import Link from 'next/link'
 
 import { appNavs } from '@/config'
-import BrandLink from '@/components/root/navs/link-brand'
-import ThemeToggle from '@/components/root/navs/toggle-theme'
+
+import BrandLink from './navs/link-brand'
+import ThemeToggle from './navs/toggle-theme'
 
 export default function SiteFooter() {
 	return (

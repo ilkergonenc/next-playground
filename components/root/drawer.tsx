@@ -1,19 +1,19 @@
 'use client'
 
 import appConfig from '@/config'
-import { cn } from '@/components/utils'
-import { Icons } from '@/components/ds/icons'
+import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
+import { Icons } from '@/components/ui/icons'
 import {
 	Sheet,
 	SheetContent,
 	SheetTitle,
 	SheetTrigger,
 } from '@/components/ui/sheet'
-import ThemeToggle from '@/components/root/navs/toggle-theme'
 
 import BrandLink from './navs/link-brand'
 import MainNavigation from './navs/nav-main'
+import ThemeToggle from './navs/toggle-theme'
 
 export function Drawer() {
 	return (

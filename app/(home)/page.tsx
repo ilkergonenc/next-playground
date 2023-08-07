@@ -1,5 +1,5 @@
-import { Hero } from '@/components/ux/hero'
-import type { HeroProps } from '@/components/ux/hero'
+import { Hero } from '@/components/hero'
+import type { HeroProps } from '@/components/hero'
 
 export default async function IndexPage() {
 	const data = await getData()

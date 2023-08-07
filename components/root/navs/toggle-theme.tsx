@@ -2,10 +2,10 @@
 
 import { useTheme } from 'next-themes'
 
-import { Icons } from '@/components/ds/icons'
 import { Button } from '@/components/ui/button'
+import { Icons } from '@/components/ui/icons'
 
-export default function ThemeToggle({ className }: { className?: string }) {
+export default function ToggleTheme({ className }: { className?: string }) {
 	const { setTheme, theme } = useTheme()
 
 	return (

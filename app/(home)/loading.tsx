@@ -1,4 +1,4 @@
-import { HeroSkeleton } from '@/components/ux/hero'
+import { HeroSkeleton } from '@/components/hero'
 
 export default function Loading() {
 	return (

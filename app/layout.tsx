@@ -3,10 +3,9 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 
 import { appMeta } from '@/config'
-import { cn } from '@/components/utils'
-import { fontSans } from '@/components/ds/fonts'
-import LayoutRoot from '@/components/root/layout'
-import { RootProviders } from '@/components/root/providers'
+import { fontSans } from '@/lib/fonts'
+import { cn } from '@/lib/utils'
+import { RootProviders, SiteFooter, SiteHeader } from '@/components/root'
 
 export const metadata: Metadata = {
 	title: {
@@ -33,7 +32,9 @@ export default function RootLayout({
 			<body className={cn('antialiased', fontSans.variable)}>
 				<div id="__next">
 					<RootProviders>
-						<LayoutRoot>{children}</LayoutRoot>
+						<SiteHeader />
+						<main className="min-h-[66vh]">{children}</main>
+						<SiteFooter />
 					</RootProviders>
 				</div>
 			</body>

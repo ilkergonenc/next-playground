@@ -1,12 +1,12 @@
 'use client'
 
 import { appNavs, appTheme } from '@/config'
-import { useViewport } from '@/hooks/use-viewport'
-import BrandLink from '@/components/root/navs/link-brand'
-import MainNavigation from '@/components/root/navs/nav-main'
-import ThemeToggle from '@/components/root/navs/toggle-theme'
+import { useViewport } from '@/lib/hooks/use-viewport'
 
 import { Drawer } from './drawer'
+import BrandLink from './navs/link-brand'
+import MainNavigation from './navs/nav-main'
+import ThemeToggle from './navs/toggle-theme'
 
 export default function SiteHeader() {
 	const { windowWidth } = useViewport()
