@@ -10,7 +10,7 @@ export const navigations = {
 		},
 		{
 			title: 'Examples',
-			href: '/',
+			href: '/posts',
 		},
 		{
 			title: 'Github',
