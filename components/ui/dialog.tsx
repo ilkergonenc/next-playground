@@ -8,7 +8,14 @@ import { cn } from '@/lib/utils'
 
 const Dialog = DialogPrimitive.Root
 
-const DialogTrigger = DialogPrimitive.Trigger
+// const DialogTrigger = DialogPrimitive.Trigger
+const DialogTrigger = ({
+	className,
+	...props
+}: DialogPrimitive.DialogTriggerProps) => (
+	<DialogPrimitive.Trigger className={cn(className)} {...props} />
+)
+DialogTrigger.displayName = DialogPrimitive.Trigger.displayName
 
 const DialogPortal = ({
 	className,
@@ -120,4 +127,6 @@ export {
 	DialogFooter,
 	DialogTitle,
 	DialogDescription,
+	DialogOverlay,
+	DialogPortal,
 }

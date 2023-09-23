@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { appMeta } from '@/config'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
-import { RootProviders, SiteFooter, SiteHeader } from '@/components/root'
+import { RootProviders } from '@/components/root'
 
 export const metadata: Metadata = {
 	title: {
@@ -31,11 +31,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body className={cn('antialiased', fontSans.variable)}>
 				<div id="__next">
-					<RootProviders>
-						<SiteHeader />
-						<main className="min-h-[66vh]">{children}</main>
-						<SiteFooter />
-					</RootProviders>
+					<RootProviders>{children}</RootProviders>
 				</div>
 			</body>
 		</html>

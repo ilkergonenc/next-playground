@@ -13,7 +13,7 @@ export function useViewport() {
 		setWindowWidth(window.innerWidth)
 		const handleWindowResize = () => {
 			setWindowWidth(window.innerWidth)
-			console.log('[useViewport]: ', windowWidth)
+			// console.log('[useViewport]: ', windowWidth)
 		}
 		window.addEventListener('resize', handleWindowResize)
 		return () => window.removeEventListener('resize', handleWindowResize)

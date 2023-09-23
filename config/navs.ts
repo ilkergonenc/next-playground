@@ -1,21 +1,33 @@
 export const navigations = {
 	main: [
+		// {
+		// 	title: 'Documentation',
+		// 	href: '/',
+		// },
+		// {
+		// 	title: 'Components',
+		// 	href: '/',
+		// },
+		// {
+		// 	title: 'Examples',
+		// 	href: '/',
+		// },
 		{
-			title: 'Documentation',
-			href: '/',
+			title: 'Chat',
+			href: '/chat',
+		},
+		{
+			title: 'Playground',
+			href: '/playground',
 		},
 		{
 			title: 'Components',
-			href: '/',
+			href: '/components',
 		},
-		{
-			title: 'Examples',
-			href: '/',
-		},
-		{
-			title: 'Github',
-			href: '/',
-		},
+		// {
+		// 	title: 'Github',
+		// 	href: '/',
+		// },
 	],
 	footer: [
 		{
